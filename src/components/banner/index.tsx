@@ -1,44 +1,66 @@
-import React from "react";
-import { Pressable, View, Image, Text } from "react-native"; 
+import { Image, Pressable, Text, View } from "react-native";
 import PagerView from "react-native-pager-view";
 
-export function Banner () {
-    return(
-        <View className="w-full h-36 rounded-2x1 mt-5 mb-4"> 
-         <PagerView style={{flex:1}} initialPage={0} pageMargin={14}> 
-
-
-            <Pressable className="w-full h-36 rounded-2x1" 
-            key="1"
-            onPress={() => console.log("CLICOU NO BANNER 1")}
-            >
-            
-            <Image
-            source={require("../../assets/")} 
-            className="w-full h-36 rounded-2-1" 
-            />
-
-         
-
-            </Pressable> 
-
-
-
-            <Pressable className="w-full h-36 rounded-2x1" 
-            key="1"
-            onPress={() => console.log("CLICOU NO BANNER 1")}
-            >
-            
-            <Image
-            source={require("../../assets/")} 
-            className="w-full h-36 rounded-2-1" 
-            />
-
-         
-
-            </Pressable>
-
-        </PagerView>
-        </View>
-    );
+export default function Banner() {
+  return (
+    <View
+      className="
+                w-full
+                h-36
+                rounded-2xl
+                mt-5
+                mb-4
+                md:h-60
+            "
+    >
+      <PagerView
+        style={{
+          flex: 1,
+        }}
+        initialPage={0}
+        pageMargin={14}
+      >
+        <Pressable
+          className="
+                w-full
+                h-36
+                md:h-60
+                rounded-2xl
+                "
+          key="1"
+          onPress={() => console.log("CLICOU NO BANNER 1")}
+        >
+          <Image
+            source={require("../../img/banner1.png")}
+            className="
+                        w-full 
+                        h-36 
+                        md:h-60
+                        rounded-2xl
+                        "
+          />
+        </Pressable>
+        <Pressable
+          className="
+                w-full
+                h-36
+                md:h-60
+                rounded-2xl
+                "
+          key="2"
+          onPress={() => console.log("CLICOU NO BANNER 2")}
+        >
+          <Image
+            source={require("../../img/banner2.png")}
+            className="
+                        w-full 
+                        h-36 
+                        md:h-60
+                        rounded-2xl
+                        "
+          />
+        </Pressable>
+      </PagerView>
+    </View>
+  );
 }
