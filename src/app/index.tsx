@@ -30,21 +30,21 @@ export default function Index() {
       <Section
         name="Em alta"
         label="Veja mais"
-        action={() => console.log("CLICOU EM VEJA MAIS")}
+        action={() => console.log("VEJA MAIS")}
         size="text-2xl"
       />
       <TrendingFoods />
       <Section
         name="Os mais conhecidos"
         label="Veja todos"
-        action={() => console.log("CLICOU EM VEJA TODOS")}
+        action={() => console.log("VEJA TODOS")}
         size="text-xl"
       />
       <Restaurants />
       <Section
         name="Restaurantes"
         label="Veja todos"
-        action={() => console.log("CLICOU NO RESTAURANTES")}
+        action={() => console.log("RESTAURANTES")}
         size="text-xl"
       />
       <RestaurantsVerticalList />
