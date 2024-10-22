@@ -1,12 +1,12 @@
 import { ScrollView, Text, View } from "react-native";
 import Header from "../components/header";
 import Constants from "expo-constants";
-import Banner from "../components/banner";
+import Banner from "../components/banners"; 
 import { Search } from "../components/search";
 import { Section } from "../components/section";
 import { TrendingFoods } from "../components/trending";
 import { Restaurants } from "../components/restaurants";
-import { RestaurantsVerticalList } from "../components/RestaurantsList";
+import { RestaurantsVerticalList } from "../components/RestaurantsLIST/item";
 
 const StatusBarHeight = Constants.statusBarHeight;
 
