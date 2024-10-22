@@ -1,23 +1,53 @@
-import { Image, Pressable, Text, View } from "react-native";
-import { RestProps } from "..";
-import Ionicons from "@expo/vector-icons/Ionicons";
+import { ScrollView, Text, View } from "react-native";
+import Header from "../components/header";
+import Constants from "expo-constants";
+import Banner from "../components/banners"; 
+import { Search } from "../components/search";
+import { Section } from "../components/section";
+import { TrendingFoods } from "../components/trending";
+import { Restaurants } from "../components/restaurants";
+import { RestaurantsVerticalList } from "../components/RestaurantsLIST/item";
 
-export function RestaurantsItem({ item }: { item: RestProps }) {
+const StatusBarHeight = Constants.statusBarHeight;
+
+export default function Index() {
   return (
-    <Pressable className="flex flex-row items-center justify-start gap-2">
-      <Image source={{ uri: item.image }} className="w-20 h-20 rounded-full" />
-      <View className="flex gap-2">
-        <Text
-          className="flex-base text-black leading-4 font-bold"
-          numberOfLines={2}
-        >
-          {item.name}
-        </Text>
-        <View className="flex-row items-center gap-1">
-          <Ionicons name="star" size={14} color="#ca8a04" />
-          <Text className="text-sm">4.5</Text>
-        </View>
+    <ScrollView
+      style={{ flex: 1 }}
+      className="bg-slate-200"
+      showsVerticalScrollIndicator={false}
+    >
+      <View
+        className="w-full px-4"
+        style={{
+          marginTop: StatusBarHeight + 8,
+        }}
+      >
+        <Header />
+        <Banner />
+        <Search />
       </View>
-    </Pressable>
+      <Section
+        name="Em alta"
+        label="Veja mais"
+        action={() => console.log("VEJA MAIS")}
+        size="text-2xl"
+      />
+      <TrendingFoods />
+      <Section
+        name="Os mais conhecidos"
+        label="Veja todos"
+        action={() => console.log("VEJA TODOS")}
+        size="text-xl"
+      />
+      <Restaurants />
+      <Section
+        name="Restaurantes"
+        label="Veja todos"
+        action={() => console.log("RESTAURANTES")}
+        size="text-xl"
+      />
+      <RestaurantsVerticalList />
+    </ScrollView>
   );
 }
