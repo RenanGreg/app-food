@@ -31,7 +31,7 @@ export default function Banner() {
           onPress={() => console.log("CLICOU NO BANNER 1")}
         >
           <Image
-            source={require("../../img/banner1.png")}
+            source={require("../../img/img/banner1.png")}
             className="
                         w-full 
                         h-36 
@@ -51,7 +51,7 @@ export default function Banner() {
           onPress={() => console.log("CLICOU NO BANNER 2")}
         >
           <Image
-            source={require("../../img/banner2.png")}
+            source={require("../../img/img/banner2.png")}
             className="
                         w-full 
                         h-36 
