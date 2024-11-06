@@ -1,7 +1,7 @@
-import { Image, Pressable, Text, View } from "react-native";
-import { RestProps } from "..";
+import { Image, Pressable, Text} from "react-native";
+import { RestaurantsProps } from ".."; 
 
-export function RestaurantsItem({ item }: { item: RestProps }) {
+export function RestaurantsItem({ item }: { item: RestaurantsProps }) {
   return (
     <Pressable
       className="flex flex-col items-center justify-center"
